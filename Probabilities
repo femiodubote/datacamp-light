@@ -1,0 +1,19 @@
+college <- read.csv("http://data-analytics.zybooks.com/college.csv")
+t.test(college, mu = 23.4, alternative="greater")
+# For a t-distribution, if the degrees of freedom is 30, what is P(t < -0.25)?
+pt(-0.25, 30, lower.tail = TRUE)
+
+# For a t-distribution, if the degrees of freedom is 30, what is P(t < 1.5)?
+pt(1.5, 30, lower.tail = TRUE)
+
+# For a t-distribution, if the degrees of freedom is 30, what is P(t > -0.25)?
+pt(-0.25, 30, lower.tail = FALSE)
+
+# For a t-distribution, if the degrees of freedom is 30, what is P(t > 1.5)?
+pt(1.5, 30, lower.tail = FALSE)
+
+# For a t-distribution, if the degrees of freedom is 30, what is P(-0.25 < t < 1.5)?
+pt(1.5, 30, lower.tail = TRUE) - pt(-0.25, 30, lower.tail = TRUE)
+
+# For a t-distribution, if the degrees of freedom is 30, what is P(1.5 < t < 2.85)?
+pt(2.85, 30, lower.tail = TRUE) - pt(1.5, 30, lower.tail = TRUE)
